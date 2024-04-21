@@ -1,32 +1,28 @@
 ---
-import CounterButton from '../components/CounterButton';
+import BuyList from '../components/BuyList'
+
+const buyList = [
+  'Controller',
+  'Bread',
+  'Water',
+  'NoteBook',
+  'Math Book',
+  'Choco Bar',
+  'Milk'
+];
 ---
 
 <style>
-  .center-Button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  .buy-list {
+    list-style: none;
+    padding: 0;
   }
 
-  .increment-button {
-    background-color: #0022ff;
-    color: #0df1cf;
-    border: none;
-    padding: 15px 30px;
-    cursor: pointer;
+  .buy-list li {
     font-size: 18px;
-    border-radius: 8px;
-  }
-
-  .increment-button:hover {
-    background-color: #0021b3;
+    margin-bottom: 10px;
   }
 </style>
 
-<div class="center-Button">
-  <h1>BOTON QUE INCREMENTA EN 50</h1>
-  <CounterButton client:load />
-</div>
+<h1>LISTA DE COMPRAS</h1>
+<BuyList buyList={buyList} />
